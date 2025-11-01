@@ -483,34 +483,6 @@ claude mcp add --transport stdio fetch -- npx -y @modelcontextprotocol/server-fe
 
 ---
 
-#### **Analytics & Tag Management (GA4/GTM)**
-1. **Context7** - Latest GA4/GTM documentation and best practices
-2. **Chrome DevTools** - Debug dataLayer, inspect tag firing, validate tracking
-3. **Playwright** - Automated testing of event tracking implementations
-4. **Filesystem** - Manage GTM container exports and tracking documentation
-5. **Memory** - Store event taxonomies and configurations across sessions
-6. **PostgreSQL** - Analyze GA4 BigQuery export data
-
-**Why:** Complete analytics implementation, debugging, and data pipeline capabilities.
-
-**Recommended Setup**:
-```bash
-# Essential (already installed)
-claude mcp list | grep -E "context7|chrome-devtools|playwright"
-
-# Recommended additions
-claude mcp add --transport stdio filesystem -- npx -y @modelcontextprotocol/server-filesystem ~/Documents/GA4-Projects
-claude mcp add --transport stdio memory -- npx -y @modelcontextprotocol/server-memory
-claude mcp add --transport stdio fetch -- npx -y @modelcontextprotocol/server-fetch
-
-# Advanced (for BigQuery data analysis)
-claude mcp add --transport stdio postgres --env POSTGRES_CONNECTION_STRING="your-connection-string" -- npx -y @modelcontextprotocol/server-postgres
-```
-
-**See Also**: [GA4/GTM Expert Usage Guide](GA4-GTM-Expert-Usage-Guide.md) for complete implementation examples.
-
----
-
 #### **AI/ML Development**
 1. **Filesystem** - Dataset access
 2. **PostgreSQL** - Data storage
