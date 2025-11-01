@@ -23,6 +23,7 @@ mcp-server-integrations-guide/
 ├── README.md                              # This file
 ├── QUICK-REFERENCE.md                     # Quick reference card (print this!)
 ├── MCP-Servers-Installation-Guide.md      # Complete MCP setup guide
+├── MCP-Integration-Skill-Usage-Guide.md   # MCP Integration skill guide
 ├── GA4-GTM-Expert-Usage-Guide.md          # Complete GA4/GTM usage guide
 ├── prompt.md                              # Agent creation instructions
 │
@@ -31,9 +32,8 @@ mcp-server-integrations-guide/
 │   │   └── ga4-gtm-expert.md              # GA4/GTM implementation expert
 │   │
 │   └── skills/                            # Custom skills
+│       ├── mcp-integration.md             # MCP server integration skill
 │       └── ga4-gtm.md                     # GA4/GTM quick skill
-│
-└── GA4-GTM-Expert-Usage-Guide.md          # Complete GA4/GTM usage guide
 ```
 
 ---
@@ -81,6 +81,15 @@ Complete reference for installing and configuring all available MCP servers:
 - ⚡ Token optimization strategies
 - 🔧 Troubleshooting tips
 
+#### [MCP Integration Skill Usage Guide](MCP-Integration-Skill-Usage-Guide.md)
+Comprehensive guide for using the MCP Integration skill:
+- 🔌 Installation workflows and examples
+- 🐛 Troubleshooting decision trees
+- 📊 Server recommendations by use case
+- 🔒 Security and credential management
+- ⚡ Token optimization strategies
+- 💻 Platform-specific guidance (macOS, Windows, Linux)
+
 #### [GA4/GTM Expert Usage Guide](GA4-GTM-Expert-Usage-Guide.md)
 Comprehensive guide for using the GA4/GTM sub agent and skill:
 - 🎯 When to use sub agent vs skill
@@ -92,6 +101,32 @@ Comprehensive guide for using the GA4/GTM sub agent and skill:
 ---
 
 ## 🤖 Available Agents & Skills
+
+### MCP Integration Expert
+
+**Skill**: `.claude/skills/mcp-integration.md`
+- MCP server installation and configuration
+- Troubleshooting connection issues
+- Server recommendations by use case
+- Token optimization strategies
+- Security and credential management
+- Platform-specific setup (macOS, Windows, Linux)
+
+**Usage Example**:
+```plaintext
+# Installing new MCP servers
+Use the mcp-integration skill to install the postgres MCP server
+
+# Troubleshooting
+Use the mcp-integration skill to debug why chrome-devtools is not connecting
+
+# Optimization
+Use the mcp-integration skill to recommend MCPs for web development workflow
+```
+
+**Full Documentation**: [MCP Integration Skill Usage Guide](MCP-Integration-Skill-Usage-Guide.md)
+
+---
 
 ### Google Analytics 4 & GTM Expert
 
@@ -213,6 +248,10 @@ Result:
 
 | Your Goal | Use This | Required MCPs |
 |-----------|----------|---------------|
+| Install MCP server | mcp-integration skill | - |
+| Debug MCP issues | mcp-integration skill | - |
+| Configure MCPs | mcp-integration skill | - |
+| MCP recommendations | mcp-integration skill | context7 |
 | Implement single event | ga4-gtm skill | context7 |
 | Debug tag firing | ga4-gtm skill | chrome-devtools |
 | Complete GA4 setup | ga4-gtm-expert agent | context7, filesystem |
@@ -227,8 +266,10 @@ Result:
 ## 📖 Learning Resources
 
 ### Internal Documentation
-- [MCP Servers Installation Guide](MCP-Servers-Installation-Guide.md) - MCP setup & config
+- [MCP Servers Installation Guide](MCP-Servers-Installation-Guide.md) - MCP setup & config reference
+- [MCP Integration Skill Usage Guide](MCP-Integration-Skill-Usage-Guide.md) - Using the MCP skill
 - [GA4/GTM Expert Usage Guide](GA4-GTM-Expert-Usage-Guide.md) - Analytics implementation
+- [QUICK-REFERENCE.md](QUICK-REFERENCE.md) - Quick commands cheat sheet
 - [prompt.md](prompt.md) - Agent creation guidelines
 
 ### External Resources

@@ -1,26 +1,41 @@
-# Quick Reference Card - GA4/GTM Expert & MCPs
+# Quick Reference Card - Claude Code Skills & MCPs
 
 > **Ultra-concise reference for daily use**
 > Print or bookmark for quick access
 
 ---
 
-## 🎯 GA4/GTM Agent/Skill Selection
+## 🎯 Skill Selection Guide
 
 | Task Type | Use This | Example |
 |-----------|----------|---------|
-| Single event | **Skill** | "Implement add_to_cart event" |
-| Debug issue | **Skill** | "Debug why purchase event not firing" |
-| Full migration | **Agent** | "Migrate UA to GA4" |
-| Architecture | **Agent** | "Design server-side GTM" |
+| Install MCP | **mcp-integration** | "Install postgres MCP server" |
+| Debug MCP | **mcp-integration** | "Why is chrome-devtools not connecting?" |
+| Configure MCP | **mcp-integration** | "Set up filesystem MCP securely" |
+| MCP recommendations | **mcp-integration** | "Best MCPs for web dev?" |
+| Single event | **ga4-gtm skill** | "Implement add_to_cart event" |
+| Debug issue | **ga4-gtm skill** | "Debug why purchase event not firing" |
+| Full migration | **ga4-gtm agent** | "Migrate UA to GA4" |
+| Architecture | **ga4-gtm agent** | "Design server-side GTM" |
 | Documentation | **Either** | "Create dataLayer spec" |
-| Roadmap | **Agent** | "Plan GA4 implementation" |
+| Roadmap | **ga4-gtm agent** | "Plan GA4 implementation" |
 
 ---
 
 ## 💬 Invocation Patterns
 
-### Quick Tasks (Skill)
+### MCP Integration (Skill)
+```plaintext
+Use the mcp-integration skill to [task]
+
+Examples:
+- Use the mcp-integration skill to install postgres MCP
+- Use the mcp-integration skill to debug chrome-devtools connection
+- Use the mcp-integration skill to recommend MCPs for my workflow
+- Use the mcp-integration skill to configure filesystem MCP securely
+```
+
+### Quick Tasks (GA4/GTM Skill)
 ```plaintext
 Use the ga4-gtm skill to [task]
 
@@ -30,7 +45,7 @@ Examples:
 - Use the ga4-gtm skill to create event documentation
 ```
 
-### Complex Projects (Agent)
+### Complex Projects (GA4/GTM Agent)
 ```plaintext
 Use the Task tool to invoke ga4-gtm-expert to [complex task]
 
@@ -43,6 +58,7 @@ Examples:
 ### Let Claude Decide
 ```plaintext
 Just describe your need clearly:
+- "Install the postgres MCP server"
 - "I need to implement checkout tracking"
 - "Debug my GTM container"
 - "Migrate from UA to GA4"
@@ -182,14 +198,15 @@ Plan migration strategy for [site]
 ```
 .claude/
 ├── agents/
-│   └── ga4-gtm-expert.md          # Complex implementations
+│   └── ga4-gtm-expert.md          # Complex GA4/GTM implementations
 └── skills/
-    └── ga4-gtm.md                  # Quick tasks
+    ├── mcp-integration.md          # MCP server integration
+    └── ga4-gtm.md                  # GA4/GTM quick tasks
 
 Docs:
-├── GA4-GTM-Expert-Usage-Guide.md   # Full usage guide
-├── MCP-Servers-Installation-Guide.md # MCP setup
-└── README.md                       # Overview
+├── GA4-GTM-Expert-Usage-Guide.md   # Full GA4/GTM usage guide
+├── MCP-Servers-Installation-Guide.md # MCP setup reference
+└── README.md                       # Overview & quick start
 ```
 
 ---
